@@ -1,0 +1,19 @@
+﻿sgi-web/ant.properties
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Pastas do projeto que não devem ser versionadas #
+.settings
+.classpath
+.project
+*/target
+.idea
+target
+
+
+
+
