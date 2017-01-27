@@ -1,4 +1,4 @@
-package br.com.pasquantonio.vinicius.hell.triangle;
+package br.com.pasquantonio.vinicius.hell.triangle.model;
 
 import org.junit.Assert;
 import org.junit.Before;

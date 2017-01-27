@@ -1,4 +1,4 @@
-package br.com.pasquantonio.vinicius.hell.triangle;
+package br.com.pasquantonio.vinicius.hell.triangle.model;
 
 import br.com.pasquantonio.vinicius.hell.triangle.exception.EquilateralTriangleException;
 
