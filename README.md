@@ -9,7 +9,7 @@ After cloning it, go to the hell.triangle folder and following comands in the co
 ```
 mvn clean install
 mvn clean package
-java -jar target/hell.triangle-0.0.1-SNAPSHOT.jar multidimensional array string
+java -jar target/hell.triangle-0.0.1-SNAPSHOT.jar "multidimensional array string"
 
 Example
 
