@@ -32,4 +32,11 @@ public class HellTriangleTest {
 		HellTriangle hellTriangle = new HellTriangle();
 		Assert.assertTrue(26 == hellTriangle.getMaxSum(triangle));
 	}
+	
+	@Test
+	public void shouldReturnMaxSumWhenHigherValuesAreInTheLastNodeOfRow(){
+		int[][] triangle = {{6},{3,5},{2,7,9},{4,6,8,14}};
+		HellTriangle hellTriangle = new HellTriangle();
+		Assert.assertTrue(34 == hellTriangle.getMaxSum(triangle));
+	}
 }
