@@ -1,2 +1,3 @@
+br\com\pasquantonio\vinicius\hell\triangle\exception\EquilateralTriangleException.class
 br\com\pasquantonio\vinicius\hell\triangle\App.class
-br\com\pasquantonio\vinicius\hell\triangle\HellTriangle.class
+br\com\pasquantonio\vinicius\hell\triangle\model\HellTriangle.class

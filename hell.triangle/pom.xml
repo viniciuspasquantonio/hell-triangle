@@ -21,4 +21,29 @@
 			<version>4.4</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+		    <plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-jar-plugin</artifactId>
+		      <version>2.4</version>
+		        <configuration>
+		          <archive>
+		            <manifest>
+		              <addClasspath>true</addClasspath>
+		              <mainClass>br.com.pasquantonio.vinicius.hell.triangle.App</mainClass>
+		            </manifest>
+		         </archive>
+		       </configuration>
+		    </plugin>
+	            <plugin>
+	                <groupId>org.codehaus.mojo</groupId>
+	                <artifactId>exec-maven-plugin</artifactId>
+	                <version>1.2.1</version>
+	                <configuration>
+	                    <mainClass>br.com.pasquantonio.vinicius.hell.triangle.App</mainClass>
+	                </configuration>
+	            </plugin>
+		  </plugins>
+    </build>
 </project>

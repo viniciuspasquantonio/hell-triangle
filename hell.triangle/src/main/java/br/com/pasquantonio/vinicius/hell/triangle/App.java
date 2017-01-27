@@ -1,5 +1,7 @@
 package br.com.pasquantonio.vinicius.hell.triangle;
 
+import br.com.pasquantonio.vinicius.hell.triangle.model.HellTriangle;
+
 /**
  * Hello world!
  *
@@ -7,7 +9,8 @@ package br.com.pasquantonio.vinicius.hell.triangle;
 public class App 
 {
     public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    {	
+        HellTriangle hellTriangle = new HellTriangle(args[0]);
+        System.out.println(hellTriangle.getMaxSum());
     }
 }

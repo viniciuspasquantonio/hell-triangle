@@ -9,62 +9,56 @@ import br.com.pasquantonio.vinicius.hell.triangle.exception.EquilateralTriangleE
 
 public class HellTriangleTest {
 	private HellTriangle hellTriangle;
-	@Before
-	public void before(){
-		hellTriangle = new HellTriangle();
-	}
 
 	@Test
 	public void shouldReturnMaxSumWhenTriangleHasOnlyRoot(){
-		int[][] triangle = {{6}};
-		
-		Assert.assertTrue(6 == hellTriangle.getMaxSum(triangle));
+		hellTriangle = new HellTriangle("[[6]]");
+		Assert.assertTrue(6 == hellTriangle.getMaxSum());
 	}
 	
 	@Test
 	public void shouldReturnMaxSumWithTwoRows(){
-		int[][] triangle = {{2},{2,9}};
-		
-		Assert.assertTrue(11 == hellTriangle.getMaxSum(triangle));
+		hellTriangle = new HellTriangle("[[2],[2,9]]");
+		Assert.assertTrue(11 == hellTriangle.getMaxSum());
 	}
 	
 	@Test
 	public void shouldReturnMaxSumWithThreeRows(){
-		int[][] triangle = {{2},{2,9},{1,2,4}};
-		
-		Assert.assertTrue(15 == hellTriangle.getMaxSum(triangle));
+		hellTriangle = new HellTriangle("[[2],[2,9],[1,2,4]]");
+		Assert.assertTrue(15 == hellTriangle.getMaxSum());
 	}
 	
 	@Test
 	public void shouldReturnMaxSumWithGivenChallangeInputExample(){
-		int[][] triangle = {{6},{3,5},{9,7,1},{4,6,8,4}};
-		
-		Assert.assertTrue(26 == hellTriangle.getMaxSum(triangle));
+		hellTriangle = new HellTriangle("[[6],[3,5],[9,7,1],[4,6,8,4]]");
+		Assert.assertTrue(26 == hellTriangle.getMaxSum());
 	}
 	
 	@Test
 	public void shouldReturnMaxSumWhenHigherValuesAreInTheLastNodeOfRow(){
-		int[][] triangle = {{6},{3,5},{2,7,9},{4,6,8,14}};
-		
-		Assert.assertTrue(34 == hellTriangle.getMaxSum(triangle));
+		hellTriangle = new HellTriangle("[[6],[3,5],[2,7,9],[4,6,8,14]]");
+		Assert.assertTrue(34 == hellTriangle.getMaxSum());
 	}
 	
 	 @Test(expected = IllegalArgumentException.class)
 	 public void shouldValidateWhenTriangleIsNull(){
-		 hellTriangle.getMaxSum(null);
+		 hellTriangle = new HellTriangle(null);
 	 }
 	 
 	 @Test(expected = EquilateralTriangleException.class)
 	 public void shouldValidateEquilateralTriangle(){
-		 int[][] triangle = {{6},{3,5},{2,7},{4,6,8,14}};
-		 hellTriangle.getMaxSum(triangle);
+		 hellTriangle = new HellTriangle("[[6],[3,5],[2,7],[4,6,8,14]]");
 	 }
 	 
 	 @Test(expected = EquilateralTriangleException.class)
 	 public void shouldValidateEquilateralTriangleUpSideDown(){
-		 int[][] triangle = {{1,2,3},{3,5},{2}};
-		 hellTriangle.getMaxSum(triangle);
+		 hellTriangle = new HellTriangle("[[1,2,3],[3,5],[2]]");
 	 }
 	
+	 public void shouldParseStringToMatrix(){
+		 int[][] expectedTriangle = {{6},{1,2},{3,4,5}};
+		 hellTriangle = new HellTriangle("[[6],[1,2],[3,4,5]]");
+		 Assert.assertArrayEquals(expectedTriangle, hellTriangle.getTriangle());
+	 }
 	
 }
