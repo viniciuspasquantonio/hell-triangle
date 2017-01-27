@@ -13,7 +13,7 @@ java -jar target/hell.triangle-0.0.1-SNAPSHOT.jar "multidimensional array string
 
 Example
 
-java -jar target/hell.triangle-0.0.1-SNAPSHOT.jar [[6],[3,5],[9,7,1],[4,6,8]]
+java -jar target/hell.triangle-0.0.1-SNAPSHOT.jar [[6],[3,5],[9,7,1],[4,6,8,10]]
 
 ```
 
